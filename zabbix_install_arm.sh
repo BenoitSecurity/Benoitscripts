@@ -10,13 +10,13 @@ apt update
 
 apt install zabbix-proxy-sqlite3 -y
 
-# Verplaatsen config script 
-
-mv zabbix_proxy.conf /etc/zabbix/
+sleep 5
 
 # install zabbix agent
 
 apt install zabbix-agent -y
+
+sleep 5
 
 # aanmaken encryptie key
 
@@ -26,13 +26,20 @@ openssl rand -hex 32 > secret.psk
 chown zabbix:zabbix secret.psk
 chmod 640 secret.psk
 
+# Verplaatsen config script 
+
+mv /home/administrator/zabbix_agentd.conf /etc/zabbix/ 
+mv zabbix_proxy.conf /etc/zabbix/
+
 # Starten zabbix proxy
 
 systemctl enable zabbix-proxy
+systemctl restart zabbix-proxy
 
-# Verplaatsen config script 
+# Starten zabbix agent
 
-mv /home/administrator/zabbix_agentd.conf /etc/zabbix/
+systemctl enable zabbix-agent
+systemctl restart zabbix-agent
 
 # Weergeven psk key
 
