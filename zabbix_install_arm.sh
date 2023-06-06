@@ -29,7 +29,7 @@ chmod 640 secret.psk
 # Verplaatsen config script 
 
 mv /home/administrator/zabbix_agentd.conf /etc/zabbix/ 
-mv zabbix_proxy.conf /etc/zabbix/
+mv /home/administrator/zabbix_proxy.conf /etc/zabbix/
 
 # Starten zabbix proxy
 
