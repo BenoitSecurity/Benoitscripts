@@ -11,7 +11,9 @@ wget https://raw.githubusercontent.com/BenoitSecurity/Benoitscripts/main/zabbix_
 
 # Download Zabbix installatie file
 
-wget https://raw.githubusercontent.com/BenoitSecurity/Benoitscripts/main/zabbix_install_arm.sh && sudo chmod +x ./zabbix_install_arm.sh
+wget https://raw.githubusercontent.com/BenoitSecurity/Benoitscripts/main/1proxy_install_arm.sh && sudo chmod +x ./1proxy_install_arm.sh
+wget https://raw.githubusercontent.com/BenoitSecurity/Benoitscripts/main/2agent_install_arm.sh && sudo chmod +x ./2agent_install_arm.sh
+wget https://raw.githubusercontent.com/BenoitSecurity/Benoitscripts/main/4finish.sh && sudo chmod +x ./4finish.sh
 
 # Download Watool
 
