@@ -1,0 +1,17 @@
+url_22_x86@wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+url_22_arm@wget https://repo.zabbix.com/zabbix/6.4/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+url_20_x86@wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu20.04_all.deb
+url_20_arm@wget https://repo.zabbix.com/zabbix/6.4/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu20.04_all.deb
+unpack_22_x86@dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+unpack_22_arm@dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+unpack_20_x86@dpkg -i zabbix-release_6.4-1+ubuntu20.04_all.deb
+unpack_20_arm@dpkg -i zabbix-release_6.4-1+ubuntu20.04_all.deb
+command@apt update
+install_proxy@apt install zabbix-proxy-sqlite3
+start_proxy@systemctl restart zabbix-proxy
+enable_proxy@systemctl enable zabbix-proxy
+install_agent@apt install zabbix-agent
+start_agent@systemctl restart zabbix-agent
+enable_agent@systemctl enable zabbix-agent
+uninstall_proxy@apt purge --auto-remove zabbix-proxy-sqlite3
+uninstall_agent@apt purge --auto-remove zabbix-agent
